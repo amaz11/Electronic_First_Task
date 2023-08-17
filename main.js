@@ -1,24 +1,50 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import { setupCounter } from "./counter.js";
+import Logo from "./assets/logo.webp";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+  <nav class="nabvar">
+  <div>
+    <img src="${Logo}" alt="Logo" />
   </div>
-`
+  <div>
+    <div>
+      <ul>
+        <li>Trending</li>
+        <li>Pre-Orders</li>
+        <li>Upcoming</li>
+        <li>Support 24/7</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>PC</li>
+        <li>Playstation</li>
+        <li>Xbox</li>
+        <li>Nintendo</li>
+        <li>Search</li>
+      </ul>
+    </div>
+  </div>
+  <div>S
+    <span>Cart</span>
+    <span>Person</span>
+  </div>
+</nav>
 
-setupCounter(document.querySelector('#counter'))
+  <div class="herosection">
+      <div class="overlay"></div>
+      <div class="herosectionText">
+        <span class="daysCount">In 15 days</span>
+        <h3 >Assassin's Creed Digital Premium<br> Edition + Early Access</h3>
+        <div class="priceTag">
+          <span>-25%</span>
+          <h2>74.89$</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+setupCounter(document.querySelector("#counter"));
