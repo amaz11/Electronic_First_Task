@@ -4,6 +4,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
+  /* overflow: hidden; */
+}
+body {
+  background-color: rgb(39, 39, 39);
 }
 
 .nabvar {
@@ -18,15 +22,69 @@
   z-index: 20;
   color: white;
 }
-.nabvar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* .nabvar ul {
+
+} */
 .nabvar ul li {
   list-style: none;
-  padding: 0 5px 0 5px;
+  /* padding: 0 5px 0 5px; */
 }
+
+.topMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.topMenu li {
+  padding: 0 15px 0 15px;
+}
+.downMenuContainer {
+  width: 700px;
+  /* overflow: hidden; */
+}
+.menuIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.downMenu {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 60px 20px 8px;
+  border-radius: 100px;
+  background: rgb(62, 78, 88);
+  background: linear-gradient(
+    304deg,
+    rgba(62, 78, 88, 1) 0%,
+    rgba(11, 22, 29, 1) 97%
+  );
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  padding: 4px 8px 2px 23px;
+  /* padding: 0 auto; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid rgba(254, 75, 26, 1); */
+  /* border-color: ; */
+  background: rgb(254, 75, 26);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 75, 26, 1) 0%,
+    rgba(255, 116, 6, 1) 100%
+  );
+}
+
 .herosection {
   background-image: url("./assets/319535.jpg");
   background-size: cover;
@@ -68,14 +126,50 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 10px;
 }
 .priceTag span {
   background-color: #ff5400;
-  padding: 10px 15px 10px 10px;
+  padding: 5px 12px 5px 10px;
   font-size: 18px;
   font-weight: 500;
   border-radius: 8px;
   border-top-right-radius: 22px;
   border-bottom-right-radius: 10px;
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+.trendindContainer {
+  padding: 0 200px;
+  color: white;
+}
+.trendindHeaer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewBtn {
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-right: 65px;
+}
+.cardItems {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 350px);
+  gap: 20px;
+}
+
+.cardItemImg {
+  border-radius: 8px;
+}
+.nameTag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
 }

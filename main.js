@@ -1,6 +1,9 @@
 import "./style.css";
 import { setupCounter } from "./counter.js";
 import Logo from "./assets/logo.webp";
+import imgcard1 from "./assets/static_banner_1691218181_64cdf105a381f.webp";
+import imgcard2 from "./assets/static_banner_1691218181_64cdf105e5b07.webp";
+import imgcard3 from "./assets/static_banner_1691255543_64ce82f7c471b.webp";
 
 document.querySelector("#app").innerHTML = `
   <div>
@@ -10,20 +13,20 @@ document.querySelector("#app").innerHTML = `
   </div>
   <div>
     <div>
-      <ul>
+      <ul class="topMenu">
         <li>Trending</li>
         <li>Pre-Orders</li>
         <li>Upcoming</li>
         <li>Support 24/7</li>
       </ul>
     </div>
-    <div>
-      <ul>
-        <li>PC</li>
-        <li>Playstation</li>
-        <li>Xbox</li>
-        <li>Nintendo</li>
-        <li>Search</li>
+    <div class="downMenuContainer">
+      <ul class="downMenu">
+        <li class="menuIcons"><i class="fa-solid fa-laptop"></i>PC<i class="fa-solid fa-angle-down"></i></li>
+        <li class="menuIcons"><i class="fa-brands fa-playstation"></i>Playstation<i class="fa-solid fa-angle-down"></i></li>
+        <li class="menuIcons"><i class="fa-brands fa-xbox"></i>Xbox<i class="fa-solid fa-angle-down"></i></li>
+        <li class="menuIcons"><i class="fa-solid fa-gamepad"></i>Nintendo<i class="fa-solid fa-angle-down"></i></li>
+        <li class="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></li>
       </ul>
     </div>
   </div>
@@ -32,7 +35,6 @@ document.querySelector("#app").innerHTML = `
     <span>Person</span>
   </div>
 </nav>
-
   <div class="herosection">
       <div class="overlay"></div>
       <div class="herosectionText">
@@ -43,6 +45,42 @@ document.querySelector("#app").innerHTML = `
           <h2>74.89$</h2>
         </div>
       </div>
+    </div>
+    <div class="trendindContainer">
+    <div class="trendindHeaer">
+    <h2>Trending</h2>
+    <button class="viewBtn">View All</button>
+    </div>
+     <div class="cardItems">
+        <div class="cardItem">
+          <img class="cardItemImg" src="${imgcard1}" alt="" />
+          <div class="nameTag">
+          <span>Sengoku Dynaty</span>
+          <span>19.99$</span>
+          </div>
+        </div>
+        <div class="cardItem">
+          <img class="cardItemImg" src="${imgcard2}" alt="" />
+          <div class="nameTag">
+          <span>Sengoku Dynaty</span>
+          <span>19.99$</span>
+          </div>
+        </div>
+        <div class="cardItem">
+          <img class="cardItemImg" src="${imgcard3}" alt="" />
+          <div class="nameTag">
+          <span>Sengoku Dynaty</span>
+          <span>19.99$</span>
+          </div>
+        </div>
+        <div class="cardItem">
+          <img class="cardItemImg" src="${imgcard3}" alt="" />
+          <div class="nameTag">
+          <span>Sengoku Dynaty</span>
+          <span>19.99$</span>
+          </div>
+        </div>
+     </div>
     </div>
   </div>
 `;
