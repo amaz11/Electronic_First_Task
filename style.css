@@ -302,9 +302,9 @@ body {
   color: white;
   position: absolute;
   top: -150%;
-  left: 33.33%;
-  width: 700px;
-  height: 400px;
+  left: 32.33%;
+  right: 32.33%;
+  width: 36%;
   padding: 24px;
   border-radius: 8px;
   background: rgb(33, 49, 56);
@@ -374,6 +374,14 @@ body {
   .viewBtn {
     margin-right: 0;
   }
+
+  .dropDownMenu {
+    width: 50%;
+    left: 20%;
+  }
+  .dropDownMenu.active {
+    top: 18%;
+  }
 }
 
 @media (max-width: 944px) {
@@ -401,6 +409,9 @@ body {
   .bar-icons {
     display: block;
   }
+  .dropDownMenuItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -414,6 +425,9 @@ body {
     padding: 0 20px;
   }
   .cardItems {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dropDownMenuItems {
     grid-template-columns: repeat(1, 1fr);
   }
 }
