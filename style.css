@@ -36,6 +36,17 @@ body {
   gap: 15px;
   font-size: 24px;
 }
+.cartIcons i {
+  cursor: pointer;
+}
+.bar-icons {
+  display: none;
+}
+
+.allMenu {
+  width: 800px;
+  /* overflow: hidden; */
+}
 .topMenu {
   display: flex;
   justify-content: center;
@@ -44,15 +55,26 @@ body {
 }
 .topMenu li {
   padding: 0 15px 0 15px;
+  cursor: pointer;
 }
 .downMenuContainer {
+  position: relative;
   width: 700px;
-  /* overflow: hidden; */
+  height: 100px;
+  /* background-color: #ff5400; */
 }
 .menuIcons {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.menuIcons.menuActive {
+  color: rgb(254, 75, 26);
+}
+.downMenuDisplay {
+  width: 700px;
+  overflow: hidden;
+  z-index: 10;
 }
 .downMenu {
   margin-top: 15px;
@@ -68,7 +90,77 @@ body {
     rgba(11, 22, 29, 1) 97%
   );
   position: relative;
+  transition: all 2s;
 }
+.downMenu li {
+  cursor: pointer;
+}
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cancle {
+  font-size: 28px;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 2s linear;
+}
+
+.cancle:hover {
+  color: rgba(254, 75, 26, 0.8);
+}
+
+.searchBarDisplay {
+  position: absolute;
+  width: 700px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: 15px;
+}
+
+.searchBar {
+  padding: 10px 8px 10px 8px;
+  border-radius: 100px;
+  background: rgb(254, 75, 26);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 75, 26, 1) 0%,
+    rgba(255, 116, 6, 1) 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 2s;
+}
+
+.searchBar input {
+  width: 80%;
+  border: none;
+  padding: 10px 0 10px;
+  background: rgba(254, 75, 26, 0);
+  font-size: 16px;
+  color: #fff;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.searchBar input::placeholder {
+  color: rgb(229, 228, 228);
+  font-family: "Barlow";
+  font-size: 16px;
+}
+
+.searchBar label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .searchIcon {
   position: absolute;
   top: 0;
@@ -102,6 +194,7 @@ body {
   align-items: center;
   padding: 0 200px;
 }
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -117,23 +210,27 @@ body {
 .herosectionText {
   color: white;
 }
+
 .herosectionText h3 {
   margin-top: 10px;
   font-size: 35px;
   font-weight: 400;
 }
+
 .daysCount {
   font-size: 14px;
   padding: 2px 8px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
 }
+
 .priceTag {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-top: 10px;
 }
+
 .priceTag span {
   background-color: #ff5400;
   padding: 5px 12px 5px 10px;
@@ -144,11 +241,13 @@ body {
   border-bottom-right-radius: 10px;
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
 }
+
 .trendindContainer {
   padding: 0 200px;
   color: white;
   margin-top: 30px;
 }
+
 .trendindHeaer {
   display: flex;
   justify-content: space-between;
@@ -159,6 +258,7 @@ body {
   font-size: 28px;
   font-weight: 400;
 }
+
 .viewBtn {
   padding: 8px 10px;
   background-color: rgba(255, 255, 255, 0);
@@ -167,6 +267,7 @@ body {
   border-radius: 8px;
   font-weight: 500;
 }
+
 .cardItems {
   margin-top: 25px;
   display: grid;
@@ -178,6 +279,7 @@ body {
   border-radius: 8px;
   width: 100%;
 }
+
 .nameTag {
   display: flex;
   justify-content: space-between;
@@ -199,8 +301,8 @@ body {
 .dropDownMenu {
   color: white;
   position: absolute;
-  left: 32.33%;
-  top: 15%;
+  top: -150%;
+  left: 33.33%;
   width: 700px;
   height: 400px;
   padding: 24px;
@@ -213,7 +315,10 @@ body {
     rgba(142, 119, 85, 1) 100%
   );
   z-index: 25;
-  display: none;
+  transition: all 500ms linear;
+}
+.dropDownMenu.active {
+  top: 15%;
 }
 .dropDownMenuTitle {
   display: flex;
@@ -289,6 +394,12 @@ body {
   }
   .downMenu {
     display: none;
+  }
+  .cancle {
+    display: none;
+  }
+  .bar-icons {
+    display: block;
   }
 }
 
