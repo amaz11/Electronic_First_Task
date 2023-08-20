@@ -30,9 +30,9 @@ document.querySelector("#app").innerHTML = `
       </ul>
     </div>
   </div>
-  <div>S
-    <span>Cart</span>
-    <span>Person</span>
+  <div class="cartIcons">
+  <i class="fa-solid fa-cart-plus"></i>
+  <i class="fa-regular fa-user"></i>
   </div>
 </nav>
   <div class="herosection">
@@ -48,7 +48,7 @@ document.querySelector("#app").innerHTML = `
     </div>
     <div class="trendindContainer">
     <div class="trendindHeaer">
-    <h2>Trending</h2>
+    <h2 class="trendindHeaerTitle">Trending</h2>
     <button class="viewBtn">View All</button>
     </div>
      <div class="cardItems">
@@ -81,6 +81,53 @@ document.querySelector("#app").innerHTML = `
           </div>
         </div>
      </div>
+    </div>
+    <div>
+      <div class="dropDownOverlay"></div>
+      <div class="dropDownMenu">
+      <div class="dropDownMenuTitle">
+      <span>Platforms</span>
+      <span>View All</span>
+      </div>
+      <div class="dropDownMenuItems">
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+        <div class="dropDownMenuItem">
+        <i class="fa-brands fa-steam"></i>
+        <span>Steam</span>
+        </div>
+      </div>
+      <div class="dropDownMenuTitle">
+      <span>Platforms</span>
+      <span>View All</span>
+      </div>
+      </div>
     </div>
   </div>
 `;
